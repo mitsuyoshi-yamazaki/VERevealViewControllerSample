@@ -19,7 +19,6 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 @interface VERevealViewController () {
 	UIView *_topView;	// a view that the rootView on. to not add gestureRecognizers to rootView.
 	UIView *_sideViewBackgroundView;	// a view that hides the back most side view.
-	BOOL _isPanning;
 }
 
 - (void)initializeRevealViewController;
@@ -110,8 +109,6 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 	
 	[self.view bringSubviewToFront:_topView];
 	[self initializeRootViewShadow];
-	
-	_isPanning = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -325,7 +322,6 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 	
 	switch (panGestureRecognizer.state) {
 		case UIGestureRecognizerStateBegan:
-			_isPanning = YES;
 			break;
 			
 		case UIGestureRecognizerStateChanged: {
@@ -344,7 +340,6 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 		case UIGestureRecognizerStateCancelled:
 		case UIGestureRecognizerStateEnded:
 		default:
-			_isPanning = NO;
 			[self panGestureDidEndAnimation];
 			break;
 	}	
