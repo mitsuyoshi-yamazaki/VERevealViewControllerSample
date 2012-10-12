@@ -15,10 +15,8 @@
 - (VERevealViewController *)revealViewController {
 	
 	if ([self.parentViewController isKindOfClass:[VERevealViewController class]]) {
-		NSLog(@"%@'s parentViewController is revealViewController %@", self, self.parentViewController);
 		return (VERevealViewController *)self.parentViewController;
 	}
-	NSLog(@"%@'s parentViewController is NOT revealViewController %@", self, self.parentViewController);
 	return nil;
 }
 

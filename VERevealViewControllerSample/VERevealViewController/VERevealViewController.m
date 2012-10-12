@@ -13,7 +13,7 @@ static NSString *const kVERevealViewControllerRelationshipSegueIdentifierRootVie
 static NSString *const kVERevealViewControllerRelationshipSegueIdentifierLeftViewController = @"toLeftViewContrllerSegue";
 static NSString *const kVERevealViewControllerRelationshipSegueIdentifierRightViewController = @"toRightViewContrllerSegue";
 
-static NSTimeInterval const _kVERevealViewControllerAnimationDulation = 0.3f;
+static NSTimeInterval const _kVERevealViewController1pxAnimationDulation = 1.0 / 800.0;
 static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 
 @interface VERevealViewController () {
@@ -301,25 +301,24 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 
 - (void)animateRootViewToFrame:(CGRect)frame {
 		
-	[UIView animateWithDuration:_kVERevealViewControllerAnimationDulation animations:^(void) {
+	CGFloat animateWidth = fabs(_topView.frame.origin.x - frame.origin.x);
+	NSTimeInterval dulation = animateWidth * _kVERevealViewController1pxAnimationDulation;
+	
+	[UIView animateWithDuration:dulation animations:^(void) {
 		[self setTopViewFrame:frame];
 	}];
 }
 
 #pragma mark - SideView GestureRecognizer
 - (void)rootViewDidTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-	
-	NSLog(@"tapped : %@", tapGestureRecognizer);
-	
+		
 	if (self.state != VERevealViewControllerStateHiddenSideViews) {
 		[self hideSideViewControllerAnimated:YES];
 	}
 }
 
 - (void)rootViewDidPan:(UIPanGestureRecognizer *)panGestureRecognizer {
-	
-	NSLog(@"panned : %@", panGestureRecognizer);
-	
+		
 	switch (panGestureRecognizer.state) {
 		case UIGestureRecognizerStateBegan:
 			break;
@@ -333,7 +332,6 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 			topViewFrame.origin.x -= (self.state == VERevealViewControllerStateRevealedRightView) ? self.rightViewWidth : 0.0f;
 			
 			[self setTopViewFrame:topViewFrame];
-			NSLog(@"topview frame ; %@", [NSValue valueWithCGRect:_topView.frame]);
 			break;
 		}
 			
