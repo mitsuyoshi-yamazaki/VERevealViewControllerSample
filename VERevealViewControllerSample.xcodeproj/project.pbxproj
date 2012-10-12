@@ -18,7 +18,14 @@
 		2CC2012D1622B88800848AFE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC2012C1622B88800848AFE /* Default-568h@2x.png */; };
 		2CC201301622B88800848AFE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC2012E1622B88800848AFE /* MainStoryboard_iPhone.storyboard */; };
 		2CC201331622B88800848AFE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC201311622B88800848AFE /* MainStoryboard_iPad.storyboard */; };
-		2CC201361622B88800848AFE /* VEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC201351622B88800848AFE /* VEViewController.m */; };
+		2CC2013F1622B8B300848AFE /* VERevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2013E1622B8B300848AFE /* VERevealViewController.m */; };
+		2CC201461622FE3500848AFE /* VEContainerRelationshipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC201451622FE3500848AFE /* VEContainerRelationshipSegue.m */; };
+		2CC201491623C04000848AFE /* UIViewController+VERevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC201481623C04000848AFE /* UIViewController+VERevealViewController.m */; };
+		2CC2014C1623C58500848AFE /* VESwapRootSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2014B1623C58500848AFE /* VESwapRootSegue.m */; };
+		2CC2014F1623CA0B00848AFE /* VERootSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2014E1623CA0B00848AFE /* VERootSampleViewController.m */; };
+		2CC201531623F12900848AFE /* icon00@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC201521623F12900848AFE /* icon00@2.png */; };
+		2CC201551623F12D00848AFE /* icon00.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC201541623F12D00848AFE /* icon00.png */; };
+		2CC201571623F34300848AFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC201561623F34300848AFE /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +44,19 @@
 		2CC2012C1622B88800848AFE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2CC2012F1622B88800848AFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		2CC201321622B88800848AFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		2CC201341622B88800848AFE /* VEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VEViewController.h; sourceTree = "<group>"; };
-		2CC201351622B88800848AFE /* VEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VEViewController.m; sourceTree = "<group>"; };
+		2CC2013D1622B8B300848AFE /* VERevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VERevealViewController.h; sourceTree = "<group>"; };
+		2CC2013E1622B8B300848AFE /* VERevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VERevealViewController.m; sourceTree = "<group>"; };
+		2CC201441622FE3500848AFE /* VEContainerRelationshipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEContainerRelationshipSegue.h; sourceTree = "<group>"; };
+		2CC201451622FE3500848AFE /* VEContainerRelationshipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEContainerRelationshipSegue.m; sourceTree = "<group>"; };
+		2CC201471623C04000848AFE /* UIViewController+VERevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+VERevealViewController.h"; sourceTree = "<group>"; };
+		2CC201481623C04000848AFE /* UIViewController+VERevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VERevealViewController.m"; sourceTree = "<group>"; };
+		2CC2014A1623C58500848AFE /* VESwapRootSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VESwapRootSegue.h; sourceTree = "<group>"; };
+		2CC2014B1623C58500848AFE /* VESwapRootSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VESwapRootSegue.m; sourceTree = "<group>"; };
+		2CC2014D1623CA0B00848AFE /* VERootSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VERootSampleViewController.h; sourceTree = "<group>"; };
+		2CC2014E1623CA0B00848AFE /* VERootSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VERootSampleViewController.m; sourceTree = "<group>"; };
+		2CC201521623F12900848AFE /* icon00@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon00@2.png"; sourceTree = "<group>"; };
+		2CC201541623F12D00848AFE /* icon00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon00.png; sourceTree = "<group>"; };
+		2CC201561623F34300848AFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC201571623F34300848AFE /* QuartzCore.framework in Frameworks */,
 				2CC201171622B88800848AFE /* UIKit.framework in Frameworks */,
 				2CC201191622B88800848AFE /* Foundation.framework in Frameworks */,
 				2CC2011B1622B88800848AFE /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +77,9 @@
 		2CC201071622B88800848AFE = {
 			isa = PBXGroup;
 			children = (
+				2CC201561623F34300848AFE /* QuartzCore.framework */,
+				2CC201541623F12D00848AFE /* icon00.png */,
+				2CC201521623F12900848AFE /* icon00@2.png */,
 				2CC2011C1622B88800848AFE /* VERevealViewControllerSample */,
 				2CC201151622B88800848AFE /* Frameworks */,
 				2CC201131622B88800848AFE /* Products */,
@@ -89,8 +111,9 @@
 				2CC201261622B88800848AFE /* VEAppDelegate.m */,
 				2CC2012E1622B88800848AFE /* MainStoryboard_iPhone.storyboard */,
 				2CC201311622B88800848AFE /* MainStoryboard_iPad.storyboard */,
-				2CC201341622B88800848AFE /* VEViewController.h */,
-				2CC201351622B88800848AFE /* VEViewController.m */,
+				2CC2014D1623CA0B00848AFE /* VERootSampleViewController.h */,
+				2CC2014E1623CA0B00848AFE /* VERootSampleViewController.m */,
+				2CC2013C1622B8A200848AFE /* VERevealViewController */,
 				2CC2011D1622B88800848AFE /* Supporting Files */,
 			);
 			path = VERevealViewControllerSample;
@@ -108,6 +131,21 @@
 				2CC2012C1622B88800848AFE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CC2013C1622B8A200848AFE /* VERevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CC2013D1622B8B300848AFE /* VERevealViewController.h */,
+				2CC2013E1622B8B300848AFE /* VERevealViewController.m */,
+				2CC201471623C04000848AFE /* UIViewController+VERevealViewController.h */,
+				2CC201481623C04000848AFE /* UIViewController+VERevealViewController.m */,
+				2CC201441622FE3500848AFE /* VEContainerRelationshipSegue.h */,
+				2CC201451622FE3500848AFE /* VEContainerRelationshipSegue.m */,
+				2CC2014A1623C58500848AFE /* VESwapRootSegue.h */,
+				2CC2014B1623C58500848AFE /* VESwapRootSegue.m */,
+			);
+			path = VERevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +206,8 @@
 				2CC2012D1622B88800848AFE /* Default-568h@2x.png in Resources */,
 				2CC201301622B88800848AFE /* MainStoryboard_iPhone.storyboard in Resources */,
 				2CC201331622B88800848AFE /* MainStoryboard_iPad.storyboard in Resources */,
+				2CC201531623F12900848AFE /* icon00@2.png in Resources */,
+				2CC201551623F12D00848AFE /* icon00.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +220,11 @@
 			files = (
 				2CC201231622B88800848AFE /* main.m in Sources */,
 				2CC201271622B88800848AFE /* VEAppDelegate.m in Sources */,
-				2CC201361622B88800848AFE /* VEViewController.m in Sources */,
+				2CC2013F1622B8B300848AFE /* VERevealViewController.m in Sources */,
+				2CC201461622FE3500848AFE /* VEContainerRelationshipSegue.m in Sources */,
+				2CC201491623C04000848AFE /* UIViewController+VERevealViewController.m in Sources */,
+				2CC2014C1623C58500848AFE /* VESwapRootSegue.m in Sources */,
+				2CC2014F1623CA0B00848AFE /* VERootSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +316,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VERevealViewControllerSample/VERevealViewControllerSample-Prefix.pch";
 				INFOPLIST_FILE = "VERevealViewControllerSample/VERevealViewControllerSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,6 +328,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VERevealViewControllerSample/VERevealViewControllerSample-Prefix.pch";
 				INFOPLIST_FILE = "VERevealViewControllerSample/VERevealViewControllerSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -307,6 +353,7 @@
 				2CC2013B1622B88800848AFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
