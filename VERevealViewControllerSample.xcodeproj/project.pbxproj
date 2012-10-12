@@ -17,7 +17,6 @@
 		2CC2012B1622B88800848AFE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC2012A1622B88800848AFE /* Default@2x.png */; };
 		2CC2012D1622B88800848AFE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC2012C1622B88800848AFE /* Default-568h@2x.png */; };
 		2CC201301622B88800848AFE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC2012E1622B88800848AFE /* MainStoryboard_iPhone.storyboard */; };
-		2CC201331622B88800848AFE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC201311622B88800848AFE /* MainStoryboard_iPad.storyboard */; };
 		2CC2013F1622B8B300848AFE /* VERevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2013E1622B8B300848AFE /* VERevealViewController.m */; };
 		2CC201461622FE3500848AFE /* VEContainerRelationshipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC201451622FE3500848AFE /* VEContainerRelationshipSegue.m */; };
 		2CC201491623C04000848AFE /* UIViewController+VERevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC201481623C04000848AFE /* UIViewController+VERevealViewController.m */; };
@@ -43,7 +42,6 @@
 		2CC2012A1622B88800848AFE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2CC2012C1622B88800848AFE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2CC2012F1622B88800848AFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		2CC201321622B88800848AFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		2CC2013D1622B8B300848AFE /* VERevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VERevealViewController.h; sourceTree = "<group>"; };
 		2CC2013E1622B8B300848AFE /* VERevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VERevealViewController.m; sourceTree = "<group>"; };
 		2CC201441622FE3500848AFE /* VEContainerRelationshipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEContainerRelationshipSegue.h; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				2CC201251622B88800848AFE /* VEAppDelegate.h */,
 				2CC201261622B88800848AFE /* VEAppDelegate.m */,
 				2CC2012E1622B88800848AFE /* MainStoryboard_iPhone.storyboard */,
-				2CC201311622B88800848AFE /* MainStoryboard_iPad.storyboard */,
 				2CC2014D1623CA0B00848AFE /* VERootSampleViewController.h */,
 				2CC2014E1623CA0B00848AFE /* VERootSampleViewController.m */,
 				2CC2013C1622B8A200848AFE /* VERevealViewController */,
@@ -205,7 +202,6 @@
 				2CC2012B1622B88800848AFE /* Default@2x.png in Resources */,
 				2CC2012D1622B88800848AFE /* Default-568h@2x.png in Resources */,
 				2CC201301622B88800848AFE /* MainStoryboard_iPhone.storyboard in Resources */,
-				2CC201331622B88800848AFE /* MainStoryboard_iPad.storyboard in Resources */,
 				2CC201531623F12900848AFE /* icon00@2.png in Resources */,
 				2CC201551623F12D00848AFE /* icon00.png in Resources */,
 			);
@@ -245,14 +241,6 @@
 				2CC2012F1622B88800848AFE /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2CC201311622B88800848AFE /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CC201321622B88800848AFE /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -318,6 +306,7 @@
 				INFOPLIST_FILE = "VERevealViewControllerSample/VERevealViewControllerSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -330,6 +319,7 @@
 				INFOPLIST_FILE = "VERevealViewControllerSample/VERevealViewControllerSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

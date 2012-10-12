@@ -17,7 +17,7 @@ static NSTimeInterval const _kVERevealViewControllerAnimationDulation = 0.3f;
 static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 
 @interface VERevealViewController () {
-	UIView *_topView;	// a transparent view that the rootView on. to not add gestureRecognizers to rootView.
+	UIView *_topView;	// a view that the rootView on. to not add gestureRecognizers to rootView.
 	BOOL _isPanning;
 }
 
