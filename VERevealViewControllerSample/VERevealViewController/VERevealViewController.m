@@ -176,13 +176,14 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 	}
 	
 	CGRect rootViewFrame = _topView.frame;
-	BOOL isRight = (rootViewFrame.origin.x > 0.0f);
-	rootViewFrame.origin.x = isRight ? self.view.frame.size.width : -self.view.frame.size.width;
+	BOOL isLeft = (rootViewFrame.origin.x > 0.0f);
+	rootViewFrame.origin.x = isLeft ? self.view.frame.size.width : -self.view.frame.size.width;
 	CGSize shadowOffset = CGSizeMake(10.0f, 0.0f);
-	shadowOffset.width *= isRight ? 1.0f : -1.0f;
+	shadowOffset.width *= isLeft ? 1.0f : -1.0f;
 	
 	[UIView animateWithDuration:0.2f animations:^(void) {
-		[self setTopViewFrame:rootViewFrame];
+//		[self setTopViewFrame:rootViewFrame];	// ここでは使わない
+		[_topView setFrame:rootViewFrame];
 	} completion:^(BOOL finished) {
 		
 		[_rootViewController removeFromParentViewController];
