@@ -18,6 +18,7 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 
 @interface VERevealViewController () {
 	UIView *_topView;	// a view that the rootView on. to not add gestureRecognizers to rootView.
+	UIView *_sideViewBackgroundView;	// a view that hides the back most side view.
 	BOOL _isPanning;
 }
 
@@ -86,6 +87,10 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
     [super viewDidLoad];
 
 	// frameの調達先がわかったらloadViewでやる
+	_sideViewBackgroundView = [[UIView alloc] initWithFrame:self.subViewFrame];
+	_sideViewBackgroundView.userInteractionEnabled = NO;
+	[self.view addSubview:_sideViewBackgroundView];
+	
 	_topView = [[UIView alloc] initWithFrame:self.subViewFrame];
 	_topView.userInteractionEnabled = YES;
 	[self.view addSubview:_topView];
@@ -369,7 +374,9 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 	CGFloat x = frame.origin.x;
 	
 	if (x > 0.0f) {
+		[self.view sendSubviewToBack:_sideViewBackgroundView];
 		[self.view sendSubviewToBack:self.rightViewController.view];
+		_sideViewBackgroundView.backgroundColor = self.leftViewController.view.backgroundColor;
 		_topView.layer.shadowOffset = CGSizeMake(-10.0f, 0.0f);
 		
 		if (x > self.leftViewWidth) {
@@ -377,7 +384,9 @@ static CGFloat const _kVERevealViewControllerSideViewDefaultWidth = 240.0f;
 		}
 	}
 	else if (x < 0.0f) {
+		[self.view sendSubviewToBack:_sideViewBackgroundView];
 		[self.view sendSubviewToBack:self.leftViewController.view];
+		_sideViewBackgroundView.backgroundColor = self.rightViewController.view.backgroundColor;
 		_topView.layer.shadowOffset = CGSizeMake(10.0f, 0.0f);
 		
 		if (x < -self.rightViewWidth) {
